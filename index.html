@@ -1,9 +1,9 @@
 ---
 layout: home
-title: Latest Posts
-description: "The personal blog of Hossain Mohd. Faysal, a doctoral candidate in Electrical Engineering at University of Pennsylvania."
-headline: An Engineer's Diary
-tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsylvania, doha, Qatar]
+title: Hawksong Cider
+description: "Asturian and Method Ancestrale style cider."
+headline: Hawksong Cider
+tags: []
 ---
 {% if site.paginate %}
 	{% for post in paginator.posts %}
@@ -23,7 +23,7 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
 	                    <h2 class="post-title text-center super lighter">
 	                        <a href="{{ site.url }}{{ post.url }}"><i class="icon-quote-left"></i> {{ post.excerpt | strip_html }}</a>
 	                    </h2>
-	                    <p class="light small text-center">
+	                    <!--<p class="light small text-center">
 	                        Share this Quote
 	                    </p>
 	                    <ul class="social-mini text-center">
@@ -56,7 +56,7 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
 			                    <i class="icon-link"></i> permalink...
 			                </a>
 			                {% endif %}
-			            </div>
+			            </div> -->
 	                </header>
 	            </article>
 	        </div>
@@ -91,11 +91,11 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
 	                            </a>
 	                        </li>
 	                    </ul>
-	                    <div class="post-info text-center small">
+	                   	<div class="post-info text-center small">
 	                        Status posted @ <time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">{{ post.date | date: "%d %b %Y" }}</time>{% if post.modified %}{% if modifiedtime != posttime %} and last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}" itemprop="dateModified">{{ post.modified | date: "%d %b %Y" }}</time>{% endif %}{% endif %}
 	                        in <span class="post-tags">{% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" data-toggle="tooltip" title="Other posts from the {{ tag | capitalize }} category" rel="tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}</span>&nbsp;<span class="post-tags">by {{ site.owner.name }}</span>
 	                        <div class="post-body bordered-bottom"></div>
-	                    </div>
+	                    </div> 
 	                </header>    
 	            </article>
 	        </div>
@@ -177,29 +177,29 @@ tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsyl
 	               <header class="post-header">
 	                    {% if post.link %}
 	                    <h2 class="post-title text-center super lighter">
-	                        <a href="{{ site.url }}{{ post.url }}" style="color: #fff; background-color: #45ADA8; border-radius: 4px; padding: 10px"><i class="icon-link"></i> {{ post.title }}</a>
+	                        <a name="{{ site.url }}{{ post.url }}" style="color: #fff; background-color: #45ADA8; border-radius: 4px; padding: 10px"><i class="icon-link"></i> {{ post.title }}</a>
 	                    {% else %}
 	                    <h2 class="post-title text-center super lighter bordered-bottom">
 	                        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
 	                    {% endif %}
 	                    </h2>
-	                    <div class="post-info text-center small">
+	                    <!-- <div class="post-info text-center small">
 	                        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">{{ post.date | date: "%d %b %Y" }}</time>{% if post.modified %}{% if modifiedtime != posttime %} and last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}" itemprop="dateModified">{{ post.modified | date: "%d %b %Y" }}</time>{% endif %}{% endif %}
 	                        in <span class="post-tags">{% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" data-toggle="tooltip" title="Other posts from the {{ tag | capitalize }} category" rel="tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}</span>{% if site.readtime %}&nbsp;<span class="post-tags"><i class="icon-time"></i>&nbsp;{% if readtime == 1 %}1 minute read{% endif %}{% if readtime > 1 %}{{ readtime }} minutes read{% endif %}{% if readtime == 0 %}Less than 1 minute read{% endif %}</span>{% endif %}
-	                    </div>
+	                    </div> -->
 	                </header>
 	                <div class="post-body bordered-bottom">
 	                {% assign excerptsize = post.excerpt | number_of_words %}
-	                {% if excerptsize <= 100 and excerptsize >= 50 %}<p class = "lead">{{ post.excerpt | strip_html }}</p>&hellip;{% else %}
-	                    <p>{{ post.content | strip_html | truncatewords:100 }}&hellip;</p>{% endif %}
+	                {% if excerptsize <= 100 and excerptsize >= 50 %}<p class = "lead">{{ post.excerpt | strip_html }}</p>{% else %}
+	                    <p>{{ post.content | strip_html | truncatewords:500 }}</p>{% endif %}
 	                    {% if post.description %}
 		                <a href="{{ site.url }}{{ post.url }}" data-toggle="tooltip" title="{{ post.description }}" class="more-link">
 		                    <i class="icon-link"></i> read more...
 		                </a>
 		                {% else %}
-		                <a href="{{ site.url }}{{ post.url }}" data-toggle="tooltip" title="Read more about {{ post.title }}" class="more-link">>
+		                <!-- <a href="{{ site.url }}{{ post.url }}" data-toggle="tooltip" title="Read more about {{ post.title }}" class="more-link">>
 		                    <i class="icon-link"></i> read more...
-		                </a>
+		                </a> -->
 		                {% endif %}
 	                </div>
 	            </article>
